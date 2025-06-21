@@ -4,63 +4,106 @@
   <meta charset="UTF-8">
   <title>KJyang_ | 遊戲玩家 | 全棧開發者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2601462441724247"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2601462441724247" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    body { font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif; background: #181818; color: #eee; margin: 0; padding: 0; }
-    .container { max-width: 700px; margin: 40px auto; background: #23272f; border-radius: 12px; box-shadow: 0 2px 16px #0004; padding: 32px 24px; }
-    h1 { font-size: 2.2em; margin-bottom: 0.2em; }
-    h2 { margin-top: 2em; }
-    pre { background: #222; color: #b5e853; border-radius: 6px; padding: 16px 18px; font-size: 1.05em; overflow-x: auto; margin-bottom: 1.2em; line-height: 1.6; }
-    code { background: none; color: inherit; padding: 0; border-radius: 0; }
-    .social { margin: 1.5em 0; display: flex; gap: 1.5em; }
+    body { font-family: 'Segoe UI', 'Noto Sans TC', Arial, sans-serif; background: #181a20; color: #f3f6fa; margin: 0; padding: 0; }
+    .container { max-width: 720px; margin: 48px auto; background: #23272f; border-radius: 16px; box-shadow: 0 4px 24px #0005; padding: 40px 32px; }
+    .header { display: flex; align-items: center; gap: 18px; margin-bottom: 0.5em; }
+    .header h1 { font-size: 2.5em; margin: 0; letter-spacing: 1px; }
+    .header .wave { font-size: 2em; }
+    .subtitle { color: #4fc3f7; font-size: 1.2em; margin-bottom: 1.5em; }
+    .profile { background: #1a1d23; border-radius: 10px; padding: 18px 22px; margin-bottom: 2em; box-shadow: 0 2px 8px #0002; }
+    .profile strong { color: #ffd54f; }
+    .section-title { color: #4fc3f7; font-size: 1.3em; margin: 2.2em 0 1em 0; letter-spacing: 1px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 1.5em; }
+    .skill-group { background: #20232a; border-radius: 8px; padding: 16px 20px; min-width: 160px; flex: 1 1 180px; box-shadow: 0 1px 4px #0002; }
+    .skill-group h3 { margin: 0 0 0.5em 0; font-size: 1.08em; color: #b5e853; letter-spacing: 0.5px; }
+    .skill-group ul { margin: 0; padding-left: 1.1em; }
+    .skill-group li { margin-bottom: 0.2em; }
+    .projects { background: #1a1d23; border-radius: 10px; padding: 18px 22px; margin-bottom: 2em; box-shadow: 0 2px 8px #0002; }
+    .project-list { list-style: none; padding: 0; margin: 0; }
+    .project-list li { margin-bottom: 0.7em; font-size: 1.08em; }
+    .project-list .title { color: #ffd54f; font-weight: bold; }
+    .project-list .desc { color: #b5e853; margin-left: 0.5em; font-size: 0.98em; }
+    .social { margin: 2em 0 1.5em 0; display: flex; gap: 1.5em; }
     .social a { color: #4fc3f7; text-decoration: none; font-size: 1.2em; display: flex; align-items: center; gap: 0.5em; transition: color 0.2s; }
     .social a:hover { color: #fff; }
-    .adsense-container { margin: 2em 0; text-align: center; }
-    .goto-clipboard { display: inline-block; margin: 2em 0 0 0; padding: 12px 28px; background: #4fc3f7; color: #222; border-radius: 8px; font-weight: bold; text-decoration: none; }
-    .goto-clipboard:hover { background: #0288d1; color: #fff; }
     .github-stats { margin-top: 2em; }
+    .goto-clipboard { display: inline-block; margin: 2em 0 0 0; padding: 12px 28px; background: #4fc3f7; color: #222; border-radius: 8px; font-weight: bold; text-decoration: none; transition: background 0.2s, color 0.2s; }
+    .goto-clipboard:hover { background: #0288d1; color: #fff; }
+    .adsense-container { margin: 2.5em 0 1.5em 0; text-align: center; }
+    .footer { margin-top: 2.5em; color: #888; font-size: 0.97em; text-align: center; }
     @media (max-width: 600px) {
-      .container { padding: 12px 2vw; }
-      pre { font-size: 0.97em; }
-      .social { flex-direction: column; gap: 0.7em; }
+      .container { padding: 14px 2vw; }
+      .header h1 { font-size: 1.6em; }
+      .skills { flex-direction: column; gap: 0.7em; }
+      .skill-group { min-width: 0; padding: 12px 10px; }
+      .profile, .projects { padding: 12px 8px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Hi there 👋</h1>
-    <p>自我介紹一下</p>
-    <pre># 基本資料
-name = "KJyang_"
-role = "遊戲玩家 | 全棧開發者"
-website = "https://kjyang0114.site"
-</pre>
-    <pre>// 技術棧
-const skills = {
-  frontend: ['Vue', 'React', 'HTML5', 'CSS3', 'JavaScript'],
-  backend: ['Node.js', 'Express', 'Python', 'Java', 'Swift'],
-  tools: ['VS Code', 'Git', 'Cursor', 'Xcode'],
-  design: ['Vuestic UI', 'Responsive Design']
-}
-</pre>
-    <pre># 最新專案
-$ cd BridgeMaster
-$ ls
-├── 🌉 BridgeMaster - 讓建橋變得又快又穩
-├── 🎯 完美視角計算與控制
-├── 🚀 智能點擊優化系統
-└── 🛡️ 安全性防護機制
-</pre>
-    <pre>{
-  "social_media": {
-    "github": "KJyang-0114",
-    "instagram": "@kjyang_0114"
-  }
-}
-</pre>
+    <div class="header">
+      <h1>Hi there</h1>
+      <span class="wave">👋</span>
+    </div>
+    <div class="subtitle">自我介紹一下</div>
+    <div class="profile">
+      <div><strong>暱稱：</strong>KJyang_</div>
+      <div><strong>身分：</strong>遊戲玩家 | 全棧開發者</div>
+      <div><strong>網站：</strong><a href="https://kjyang0114.site" target="_blank" style="color:#4fc3f7;">https://kjyang0114.site</a></div>
+    </div>
+    <div class="section-title">技能樹</div>
+    <div class="skills">
+      <div class="skill-group">
+        <h3>前端</h3>
+        <ul>
+          <li>Vue</li>
+          <li>React</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>後端</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Python</li>
+          <li>Java</li>
+          <li>Swift</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>工具</h3>
+        <ul>
+          <li>VS Code</li>
+          <li>Git</li>
+          <li>Cursor</li>
+          <li>Xcode</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>設計</h3>
+        <ul>
+          <li>Vuestic UI</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-title">最新專案</div>
+    <div class="projects">
+      <ul class="project-list">
+        <li><span class="title">🌉 BridgeMaster</span><span class="desc">讓建橋變得又快又穩</span></li>
+        <li><span class="title">🎯 完美視角計算與控制</span></li>
+        <li><span class="title">🚀 智能點擊優化系統</span></li>
+        <li><span class="title">🛡️ 安全性防護機制</span></li>
+      </ul>
+    </div>
+    <div class="section-title">社群連結</div>
     <div class="social">
       <a href="https://github.com/KJyang-0114" target="_blank" title="GitHub">
         <i class="fab fa-github"></i>GitHub
@@ -74,7 +117,6 @@ $ ls
     </div>
     <a class="goto-clipboard" href="/online-clipboard/">👉 點這裡進入線上剪貼簿</a>
     <div class="adsense-container">
-      <!-- Google AdSense 廣告 -->
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-2601462441724247"
@@ -85,7 +127,7 @@ $ ls
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    <p style="margin-top:2em;color:#888;font-size:0.95em;">#這就別看了 沒在用github當倉庫的大聰明</p>
+    <div class="footer">#這就別看了 沒在用github當倉庫的大聰明</div>
   </div>
 </body>
 </html>
